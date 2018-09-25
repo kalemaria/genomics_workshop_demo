@@ -1,4 +1,6 @@
-complimentary_nucleotides = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}
+#from rna import RNA
+
+complementary_nucleotides = {'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C'}
 
 
 class DNA:
@@ -21,5 +23,9 @@ class DNA:
         return True if all(are_good) else False
 
     @property
-    def complementary_sequence(self):
-        return DNA(''.join(complimentary_nucleotides[nucleotide.upper()] for nucleotide in self.sequence))
+    def complement(self):
+        return DNA(''.join(complementary_nucleotides[nucleotide.upper()] for nucleotide in self.sequence))
+
+    # def transcribe(self):
+    #     # return RNA(str(self.complement).replace('T', 'U'))
+    #     return str(self.complement).replace('T', 'U')
