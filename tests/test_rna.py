@@ -1,4 +1,4 @@
-from rna import RNA
+from genomics_demo.rna import RNA
 import pytest
 
 
