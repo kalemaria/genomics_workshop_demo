@@ -23,15 +23,3 @@ class DNA:
     @property
     def complementary_sequence(self):
         return DNA(''.join(complimentary_nucleotides[nucleotide.upper()] for nucleotide in self.sequence))
-
-
-if __name__ == '__main__':
-    try:
-        assert DNA('ATB')
-    except ValueError:
-        pass
-    assert DNA('GTC').complementary_sequence == DNA('CAG')
-    assert DNA('ATc').complementary_sequence == DNA('TAG')
-    dna = DNA('ACT')
-
-    print('it worked!')
